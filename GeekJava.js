@@ -111,7 +111,7 @@ function displayGameData(gameID) {
 
 function displayUserData() {
 
-    
+
 
 
 }
