@@ -8,33 +8,27 @@
     <link rel="stylesheet" type="text/css" href="GeekPeek.css">
 </head>
 <body onload="doOnLoad()">
-<img src="Geeklogo.png" id="logo">
+<div class="container">
 
-<div id="Hottest">
-<h1>Hottest game of the moment</h1>
+<div><img src="Geeklogo.png" id="logo"></div>
+<div class="container">
+<div class="Hottest">
+    <h3>Hottest game at the moment:</h3>
 <p id="hottestName"></p>
+</div>
+
+<div class="Hottest" >
 <p id="hottestImg"></p>
 </div>
-
-
-<input id="userSearchInput"> </input><button id="userSearchBtn" onclick="displayUserData()">Search For an user</button>
-<div id="userSearchData">
-    <table>
-        <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-        </tr>
-    </table>
 </div>
-
-
-
-
-
-
-
+</div>
+<input id="gamesSearchInput"> </input><button id="gamesSearchBtn" onclick="displaySearchedGame()">Search for a game</button>
+<div class="container2">
+    <div id="name">1</div>
+    <div id="year">2</div>
+    <div id="playingTime">3</div>
+    <div id="score">4</div>
+    <div id="pic">5</div>
+</div>
 </body>
 </html>

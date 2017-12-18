@@ -40,8 +40,8 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
 
 
             $("#hottestName").html(hotName);
-            $("#hottestImg").html("<img id='hottestGameImg' src=" + hotImg +">");
-
+            $("#hottestImg").html("<img src=" + hotImg +" id='hottestGameImg'>");
+            $(".Hottest").fadeIn("slow");
         }
 
 
@@ -52,7 +52,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
 function displaySearchedGame() {
     var gameID
     searchedGame = document.getElementById("gamesSearchInput").value;
-    var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=1";
+    var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=0";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
@@ -85,22 +85,28 @@ function displayGameData(gameID) {
 
             var names = raakaData.getElementsByTagName("name");
             var name = names[0].getAttribute("value");
-
+            $("#name").html(name);
+            $("#name").fadeIn("slow");
             var years = raakaData.getElementsByTagName("yearpublished");
             var year = years[0].getAttribute("value");
-
+            $("#year").html(year);
+            $("#year").fadeIn("slow");
             var times = raakaData.getElementsByTagName("playingtime");
             var time = times[0].getAttribute("value");
-
+            $("#playingTime").html(time);
+            $("#playingTime").fadeIn("slow");
             var averages = raakaData.getElementsByTagName("average");
             var average = averages[0].getAttribute("value");
-
+            $("#score").html(average);
+            $("#score").fadeIn("slow");
             var thumbnails = raakaData.getElementsByTagName("thumbnail");
             var thumbnail2 = thumbnails[0];
             var thumbnail = thumbnail2.childNodes[0].nodeValue;
+            $("#pic").html("<img src='" + thumbnail + "'>");
+            $("#pic").fadeIn("slow");
 
-            $("#gameSearchData").html("<table> <tr> <td>Name:" + name + " </td><td>Year: " + year + "</td><td>Playing time: " + time + "</td><td>Score: " + average + "</td><td> <img src='" + thumbnail + "'> </td></tr></table>");
-
+            //$("#gameSearchData").html("<table> <tr> <td>Name:" + name + " </td><td>Year: " + year + "</td><td>Playing time: " + time + "</td><td>Score: " + average + "</td><td> <img src='" + thumbnail + "'> </td></tr></table>");
+            //$("#gameSearchData").fadeIn("slow");
         }
 
     }
@@ -110,9 +116,26 @@ function displayGameData(gameID) {
 
 
 function displayUserData() {
+    var userSearch
+    var searchedUser = document.getElementById("userSearchInput").value;
+    var url = bggAPIurl + "user?name=" + searchedUser + "&hot=1&top=1&domain=boardgame";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 
 
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            raakaData = xmlhttp.responseXML;
+            var results = raakaData.getElementsByTagName("item");
+            gameID = results[0].getAttribute("id");
 
+            displayGameData(gameID);
+
+
+        }
+
+
+    }
 
 }
 

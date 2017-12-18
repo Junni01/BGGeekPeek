@@ -1,11 +1,53 @@
 #Hottest { background: lightpink }
 
 body { background: mediumpurple}
-
+#logo {  width: 500px;}
 #hottestGameImg {
 
     border: 1px solid black;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
 
+}
+
+.Hottest {
+
+    display:none;
+    background-color:lightgrey;
+
+}
+
+.container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 300px 300px;
+ }
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+
+}
+
+#gameSearchData {
+
+    display:none;
+
+}
+
+#name {display:none;
+border: black solid 2px;
+    font-size: large;
+}
+#year {display:none;
+    border: black solid 2px;
+}
+#score {display:none;
+    border: black solid 2px;
+}
+#pic {display:none;
+    border: black solid 2px;
+}
+#playingTime {display:none;
+    border: black solid 2px;
 }
