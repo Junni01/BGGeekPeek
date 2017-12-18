@@ -40,7 +40,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
 
 
             $("#hottestName").html(hotName);
-            $("#hottestImg").html("<img src=" + hotImg +">");
+            $("#hottestImg").html("<img id='hottestGameImg' src=" + hotImg +">");
 
         }
 
