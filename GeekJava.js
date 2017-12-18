@@ -97,7 +97,7 @@ function displayGameData(gameID) {
 
             $("#score").html("Rating: " + average + "/10");
             $("#score").fadeIn("slow");
-            var thumbnails = raakaData.getElementsByTagName("thumbnail");
+            var thumbnails = raakaData.getElementsByTagName("image");
             var thumbnail2 = thumbnails[0];
             var thumbnail = thumbnail2.childNodes[0].nodeValue;
             $("#pic").html("<img src='" + thumbnail + "'>");
