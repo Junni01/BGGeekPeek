@@ -37,10 +37,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
             hotName = games[0].getAttribute("value");
             games2 = raakaData.getElementsByTagName("thumbnail");
             var hotImg = games2[0].getAttribute("value");
-
-
-            $("#hottestName").html(hotName);
-            $("#hottestImg").html("<img src=" + hotImg +" id='hottestGameImg'>");
+            $(".Hottest").html("Hottest game of the moment: </br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
             $(".Hottest").fadeIn("slow");
         }
 
@@ -52,7 +49,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
 function displaySearchedGame() {
     var gameID
     searchedGame = document.getElementById("gamesSearchInput").value;
-    var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=0";
+    var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=1";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
@@ -89,15 +86,16 @@ function displayGameData(gameID) {
             $("#name").fadeIn("slow");
             var years = raakaData.getElementsByTagName("yearpublished");
             var year = years[0].getAttribute("value");
-            $("#year").html(year);
+            $("#year").html("Published: " + year);
             $("#year").fadeIn("slow");
             var times = raakaData.getElementsByTagName("playingtime");
             var time = times[0].getAttribute("value");
-            $("#playingTime").html(time);
+            $("#playingTime").html("Play time: " + time);
             $("#playingTime").fadeIn("slow");
             var averages = raakaData.getElementsByTagName("average");
-            var average = averages[0].getAttribute("value");
-            $("#score").html(average);
+            var average = parseFloat(averages[0].getAttribute("value")).toFixed(1);
+
+            $("#score").html("Rating: " + average + "/10");
             $("#score").fadeIn("slow");
             var thumbnails = raakaData.getElementsByTagName("thumbnail");
             var thumbnail2 = thumbnails[0];

@@ -1,7 +1,7 @@
 #Hottest { background: lightpink }
 
 body { background: mediumpurple}
-#logo {  width: 500px;}
+#logo {  height: 200px;}
 #hottestGameImg {
 
     border: 1px solid black;
@@ -14,13 +14,14 @@ body { background: mediumpurple}
 
     display:none;
     background-color:lightgrey;
+    border-radius: 10px;
 
 }
 
 .container {
      display: grid;
-     grid-template-columns: 1fr 1fr;
-     grid-template-rows: 300px 300px;
+     grid-template-columns: 2fr 1fr;
+     grid-template-rows: 200px 200px;
  }
 .container2 {
     display: grid;
@@ -37,7 +38,7 @@ body { background: mediumpurple}
 
 #name {display:none;
 border: black solid 2px;
-    font-size: large;
+    font-size: 50px;
 }
 #year {display:none;
     border: black solid 2px;
