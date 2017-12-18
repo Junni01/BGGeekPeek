@@ -14,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeekPeek.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GeekPeek.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GeekPeek.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeekJava.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeekJava.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GeekJava.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state relative-caret-position="1069">
+              <caret line="140" column="17" lean-forward="true" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -149,12 +149,12 @@
       <workItem from="1512999460968" duration="1523000" />
       <workItem from="1513147979271" duration="599000" />
       <workItem from="1513596947350" duration="836000" />
-      <workItem from="1513604176670" duration="12963000" />
+      <workItem from="1513604176670" duration="13102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28655000" />
+    <option name="totallyTimeSpent" value="28794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -329,14 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GeekJava.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GeekPeek.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -352,6 +344,14 @@
           <folding>
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeekJava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1069">
+          <caret line="140" column="17" lean-forward="true" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

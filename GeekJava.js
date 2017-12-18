@@ -138,8 +138,8 @@ function displayUserData() {
 }
 
 function displayRandomGame() {
-
-
+    var gameID = Math.floor((Math.random() * 233976));
+    displayGameData(gameID);
 
 }
 
