@@ -39,8 +39,8 @@ function getHotness() {  // This function fetches the number 1. spot on thecle b
             hotName = games[0].getAttribute("value");
             games2 = raakaData.getElementsByTagName("thumbnail");
             var hotImg = games2[0].getAttribute("value");
-            $(".Hottest").html("<p>Hottest game of the moment:</p> </br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
-            $(".Hottest").fadeIn("slow");
+            $("#Hottest").html("<p>Hottest game of the moment:</p> </br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
+            $("#Hottest").fadeIn("slow");
         }
 
 
