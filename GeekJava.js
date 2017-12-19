@@ -10,6 +10,8 @@ var games;
 var hotName;
 var games2;
 var searchedGame;
+var gameID;
+var thumbnail;
 
 function displayHottest() {
 
@@ -24,7 +26,7 @@ function doOnLoad() // this is everything that happens once the <body> section h
 }
 
 
-function getHotness() {  // This function fetches the number 1. spot on the board game geek hotness chart and displays it's name and thumbnail.
+function getHotness() {  // This function fetches the number 1. spot on thecle board game geek hotness chart and displays it's name and thumbnail.
 
     var url = bggAPIurl + "hot?type=boardgame";
     xmlhttp.open("GET", url, true);
@@ -47,7 +49,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
 }
 
 function displaySearchedGame() {
-    var gameID
+
     searchedGame = document.getElementById("gamesSearchInput").value;
     var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=1";
     xmlhttp.open("GET", url, true);
@@ -90,7 +92,7 @@ function displayGameData(gameID) {
             $("#year").fadeIn("slow");
             var times = raakaData.getElementsByTagName("playingtime");
             var time = times[0].getAttribute("value");
-            $("#playingTime").html("Play time: " + time);
+            $("#playingTime").html("Play time: " + time + " minutes");
             $("#playingTime").fadeIn("slow");
             var averages = raakaData.getElementsByTagName("average");
             var average = parseFloat(averages[0].getAttribute("value")).toFixed(1);
@@ -99,10 +101,17 @@ function displayGameData(gameID) {
             $("#score").fadeIn("slow");
             var thumbnails = raakaData.getElementsByTagName("image");
             var thumbnail2 = thumbnails[0];
-            var thumbnail = thumbnail2.childNodes[0].nodeValue;
-            $("#pic").html("<img src='" + thumbnail + "'>");
-            $("#pic").fadeIn("slow");
+            thumbnail = thumbnail2.childNodes[0].nodeValue;
 
+            if (thumbnail == " " || thumbnail == null) {
+                $("#pic").html("Image not found");
+                $("#pic").fadeIn("slow");
+            } else {
+
+                $("#pic").html("<img src='" + thumbnail + "'>");
+                $("#pic").fadeIn("slow");
+
+            }
             //$("#gameSearchData").html("<table> <tr> <td>Name:" + name + " </td><td>Year: " + year + "</td><td>Playing time: " + time + "</td><td>Score: " + average + "</td><td> <img src='" + thumbnail + "'> </td></tr></table>");
             //$("#gameSearchData").fadeIn("slow");
         }
@@ -143,6 +152,35 @@ function displayRandomGame() {
 
 }
 
+function displayTop10(choice) {
+
+    switch (choice) {
+
+        case 1: gameID = 161936;
+
+        case 2: gameID = 174430;
+
+        case 3: gameID = 182028;
+
+        case 4: gameID = 12333;
+
+        case 5: gameID = 187645;
+
+        case 6: gameID = 167791;
+
+        case 7: gameID = 120677;
+
+        case 8: gameID = 169786;
+
+        case 9: gameID = 173346;
+
+        case 10: gameID = 84876;
+
+
+    }
+
+    displayGameData(gameID)
+}
 
 
 
