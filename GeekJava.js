@@ -12,6 +12,7 @@ var games2;
 var searchedGame;
 var gameID;
 var thumbnail;
+var choice;
 
 /*
 This function was used for testing purposes.
@@ -157,29 +158,30 @@ function displayRandomGame() { // Just a bit of fun with the API, the math.rando
 }
 
 function displayTop10() {  // Basic switch case clause for choosing the right id number of the top 10 games, and once again results are passed to displayGameData.
-    var choice = $('#topdrop').val();
+    choice = $('#topdrop').val();
     switch (choice) {
 
-        case 1: gameID = 161936;
+        case "1": gameID = "161936";
+        break;
 
-        case 2: gameID = 174430;
-
-        case 3: gameID = 182028;
-
-        case 4: gameID = 12333;
-
-        case 5: gameID = 187645;
-
-        case 6: gameID = 167791;
-
-        case 7: gameID = 120677;
-
-        case 8: gameID = 169786;
-
-        case 9: gameID = 173346;
-
-        case 10: gameID = 84876;
-
+        case "2": gameID = "174430";
+            break;
+        case "3": gameID = "182028";
+            break;
+        case "4": gameID = "12333";
+            break;
+        case "5": gameID = "187645";
+            break;
+        case "6": gameID = "167791";
+            break;
+        case "7": gameID = "120677";
+            break;
+        case "8": gameID = "169786";
+            break;
+        case "9": gameID = "173346";
+            break;
+        case "10": gameID = "84876";
+            break;
 
     }
 

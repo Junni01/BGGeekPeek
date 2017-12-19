@@ -37,18 +37,29 @@
         <div class="row">
             <div id="searchbox">
                 <br><br>
+                <select id="topdrop">
+                    <option value="1">Pandemic Legacy: Season 1 </option>
+                    <option value="2">Gloomhaven</option>
+                    <option value="3">Through the Ages: A New Story of Civilization</option>
+                    <option value="4">Twilight Struggle</option>
+                    <option value="5">Star Wars: Rebellion</option>
+                    <option value="6">Terraforming Mars</option>
+                    <option value="7">Terra Mystica</option>
+                    <option value="8">Scythe</option>
+                    <option value="9">7 Wonders Duel</option>
+                    <option value="10">The Castles of Burgundy</option>
+
+                </select>
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="displayTop10()">
+                    Top 10 Game Info
+                </button>
+
+                <br><br>
 
                 
                 <input id="gamesSearchInput"> </input><button class="btn btn-info" id="gamesSearchBtn" onclick="displaySearchedGame()">Search for a game</button><button class="btn btn-info" onclick="displayRandomGame()">Random Game</button>
 
-                
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="displayTop10">
-                      Top 10
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        
-                    </div>
-                  
+                <br><br>
 
                 <ul class="list-group">
                     <li class="list-group-item"><div id="name">1</div></li>
