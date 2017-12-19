@@ -103,15 +103,12 @@ function displayGameData(gameID) {
             var thumbnail2 = thumbnails[0];
             thumbnail = thumbnail2.childNodes[0].nodeValue;
 
-            if (thumbnail == " " || thumbnail == null) {
-                $("#pic").html("Image not found");
-                $("#pic").fadeIn("slow");
-            } else {
 
-                $("#pic").html("<img src='" + thumbnail + "'>");
-                $("#pic").fadeIn("slow");
+            $("#pic").html("<img id='pict' src='" + thumbnail + "'>");
+            $('#pict').width(500);
+            $("#pic").fadeIn("slow");
 
-            }
+
             //$("#gameSearchData").html("<table> <tr> <td>Name:" + name + " </td><td>Year: " + year + "</td><td>Playing time: " + time + "</td><td>Score: " + average + "</td><td> <img src='" + thumbnail + "'> </td></tr></table>");
             //$("#gameSearchData").fadeIn("slow");
         }
