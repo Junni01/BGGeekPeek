@@ -30,6 +30,10 @@ body { background: mediumpurple}
 
 }
 
+.img-responsive {
+    margin: 0 auto;
+}
+
 #gameSearchData {
 
     display:none;
