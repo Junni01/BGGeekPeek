@@ -156,8 +156,8 @@ function displayRandomGame() { // Just a bit of fun with the API, the math.rando
 
 }
 
-function displayTop10(choice) {  // Basic switch case clause for choosing the right id number of the top 10 games, and once again results are passed to displayGameData.
-
+function displayTop10() {  // Basic switch case clause for choosing the right id number of the top 10 games, and once again results are passed to displayGameData.
+    var choice = $('#topdrop').val();
     switch (choice) {
 
         case 1: gameID = 161936;
