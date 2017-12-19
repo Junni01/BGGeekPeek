@@ -29,9 +29,9 @@ html *
      grid-template-rows: 200px 200px;
  }
 .container2 {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
 
 }
 
@@ -47,7 +47,7 @@ html *
 
 #name {display:none;
 border: black solid 2px;
-    font-size: 50px;
+    font-size: 30px;
 }
 #year {display:none;
     border: black solid 2px;
@@ -71,5 +71,11 @@ border: black solid 2px;
 .button {
 
     margin: 5px;
+}
+
+.p {
+
+    font-size: 20px;
+    color: white;
 }
 
