@@ -9,28 +9,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> 
 </head>
 <body onload="doOnLoad()">
 
-        <div class="container">
+        <div class="container-fluid">
                 <div class="row">
                     <div class="col-4">
                       <div class="text-center">
-                        <img src="Geeklogo.png"> 
+                        <img src="geekpeek.png"> 
                       </div>     
                     </div>
                 </div>
             </div>
 
-<div class="Hottest">
-</div>
-<input id="gamesSearchInput"> </input><button id="gamesSearchBtn" onclick="displaySearchedGame()">Search for a game</button><button onclick="displayRandomGame()">Random Game</button>
-<div class="container2">
-    <div id="name">1</div>
-    <div id="year">2</div>
-    <div id="playingTime">3</div>
-    <div id="score">4</div>
-    <div id="pic">5</div>
+<br><br>
+
+<div class="container-fluid">
+        <div class="row">
+                    <div class="Hottest">
+                    </div>
+            </div>
+        </div> 
+
+<br><br>
+
+<div class="container-fluid">
+        <div class="row">
+            <div id="searchbox">
+
+                <input id="gamesSearchInput"> </input><button class="btn btn-info" id="gamesSearchBtn" onclick="displaySearchedGame()">Search for a game</button><button class="btn btn-info" onclick="displayRandomGame()">Random Game</button>
+                <div class="container2">
+                    <div id="name">1</div>
+                    <div id="year">2</div>
+                    <div id="playingTime">3</div>
+                    <div id="score">4</div>
+                    <div id="pic">5</div>
+                </div>
+            </div>
+        </div>
 </div>
 </body>
 </html>

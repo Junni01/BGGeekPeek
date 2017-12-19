@@ -37,7 +37,7 @@ function getHotness() {  // This function fetches the number 1. spot on the boar
             hotName = games[0].getAttribute("value");
             games2 = raakaData.getElementsByTagName("thumbnail");
             var hotImg = games2[0].getAttribute("value");
-            $(".Hottest").html("Hottest game of the moment: </br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
+            $(".Hottest").html("Hottest game of the moment: </br></br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
             $(".Hottest").fadeIn("slow");
         }
 

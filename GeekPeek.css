@@ -1,7 +1,10 @@
+html *
+{
+    font-family: 'Aldrich', sans-serif;
+}
+
 #Hottest { background: lightpink }
 
-body { background: mediumpurple}
-#logo {  height: 200px;}
 #hottestGameImg {
 
     border: 1px solid black;
@@ -12,10 +15,12 @@ body { background: mediumpurple}
 
 .Hottest {
 
+    padding: 20px;
     display:none;
-    background-color:lightgrey;
+    background-color: #546E7A;
     border-radius: 10px;
-
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .container {
@@ -56,3 +61,15 @@ border: black solid 2px;
 #playingTime {display:none;
     border: black solid 2px;
 }
+
+#searchbox {
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.button {
+
+    margin: 5px;
+}
+
