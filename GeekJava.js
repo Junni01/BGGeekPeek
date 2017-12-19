@@ -5,7 +5,7 @@ var xmlhttp = new XMLHttpRequest();
 var bggAPIurl = "https://www.boardgamegeek.com/xmlapi2/";   // This is the root url of the API were using, we can append commands to this.
 var jsonObj;
 var raakaData;
-var raakaData2;
+var raakaData2;  // These variables are here for testing purposes, they might as well be contained in their own methods but for some reason I'm unable to check their content in the console if they're not here.
 var games;
 var hotName;
 var games2;
@@ -13,22 +13,25 @@ var searchedGame;
 var gameID;
 var thumbnail;
 
+/*
+This function was used for testing purposes.
+
 function displayHottest() {
 
     $("#hottestName").html(hotName);
 
-}
+} */
 
-function doOnLoad() // this is everything that happens once the <body> section has loaded.
+function doOnLoad() // this is everything that happens once the <body> section has loaded. At the moment that means the hottest game at the moment if fetched from the API
 {
  getHotness();
 
 }
 
 
-function getHotness() {  // This function fetches the number 1. spot on thecle board game geek hotness chart and displays it's name and thumbnail.
+function getHotness() {  // This function fetches the number 1. spot on the board game geek hotness chart and displays it's name and thumbnail.
 
-    var url = bggAPIurl + "hot?type=boardgame";
+    var url = bggAPIurl + "hot?type=boardgame"; // url is appended with the correct string
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
@@ -40,7 +43,7 @@ function getHotness() {  // This function fetches the number 1. spot on thecle b
             games2 = raakaData.getElementsByTagName("thumbnail");
             var hotImg = games2[0].getAttribute("value");
             $("#Hottest").html("<p>Hottest game of the moment:</p> </br>" + "<img src=" + hotImg +" id='hottestGameImg'></br>" + hotName);
-            $("#Hottest").fadeIn("slow");
+            $("#Hottest").fadeIn("slow");  // nice jquery effect.
         }
 
 
@@ -48,7 +51,7 @@ function getHotness() {  // This function fetches the number 1. spot on thecle b
 
 }
 
-function displaySearchedGame() {
+function displaySearchedGame() {  // This function captures input from the search box and uses the API to get the Id of the game that was searched.
 
     searchedGame = document.getElementById("gamesSearchInput").value;
     var url = bggAPIurl + "search?query=" + searchedGame + "&type=boardgame&exact=1";
@@ -62,7 +65,7 @@ function displaySearchedGame() {
             var results = raakaData.getElementsByTagName("item");
             gameID = results[0].getAttribute("id");
 
-            displayGameData(gameID);
+            displayGameData(gameID); // The ID is then passed to the function that displays game stats according to game ID. Nice way to reuse code since the other functions are tied to the same HTML elements.
 
 
         }
@@ -71,7 +74,7 @@ function displaySearchedGame() {
 
 }
 
-function displayGameData(gameID) {
+function displayGameData(gameID) {  // this method handles all the inner html stuff. It gets some core information about the game and a link to a picture.
 
     var url = bggAPIurl + "thing?id=" + gameID + "&stats=1";
     xmlhttp.open("GET", url, true);
@@ -119,6 +122,10 @@ function displayGameData(gameID) {
 }
 
 
+/*
+
+The API handles user collection calls poorly so we didn't implement this part.
+
 function displayUserData() {
     var userSearch
     var searchedUser = document.getElementById("userSearchInput").value;
@@ -141,15 +148,15 @@ function displayUserData() {
 
     }
 
-}
+}  */
 
-function displayRandomGame() {
+function displayRandomGame() { // Just a bit of fun with the API, the math.random generates a random ID number and calls for the displaygamedata function with it. The database also contains the data for videogame geek so the results may vary.
     var gameID = Math.floor((Math.random() * 233976));
     displayGameData(gameID);
 
 }
 
-function displayTop10(choice) {
+function displayTop10(choice) {  // Basic switch case clause for choosing the right id number of the top 10 games, and once again results are passed to displayGameData.
 
     switch (choice) {
 
